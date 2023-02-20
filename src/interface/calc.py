@@ -1,5 +1,4 @@
-import sys
-from PySide6.QtWidgets import QApplication, QWidget, QGridLayout, QLineEdit, QPushButton
+from PySide6.QtWidgets import QWidget, QGridLayout, QLineEdit, QPushButton
 
 
 class Calculator(QWidget):

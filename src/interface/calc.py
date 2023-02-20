@@ -18,6 +18,10 @@ class Calculator(QWidget):
         # установка названия окна
         self.setWindowTitle("Смешной калькулятор")
 
+        def _createMenuBar(self):
+            menuBar = QMenuBar(self)
+            self.setMenuBar(menuBar)
+
         # вот этот прикол добавляет кнопки и вставялет их в слоты (не казино)
         btn_7 = QPushButton("7")
         btn_7.clicked.connect(lambda: self.append_number("7"))

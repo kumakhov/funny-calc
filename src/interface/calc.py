@@ -6,23 +6,19 @@ class Calculator(QWidget):
     def __init__(self):
         super().__init__()
 
-        # create the display for the calculator
         # окошко калькулятора (цифры которые показывает)
         self.display = QLineEdit(self)
         self.display.setReadOnly(True)
 
-        # create a grid layout for buttons
         # создание сетки для кнопок
         layout = QGridLayout()
         layout.addWidget(self.display, 0, 0, 1, 5)
 
         self.setLayout(layout)
         self.show()
-        # set the window title
         # установка названия окна
         self.setWindowTitle("Смешной калькулятор")
 
-        # add buttons to the grid layout and connect them to slots
         # вот этот прикол добавляет кнопки и вставялет их в слоты (не казино)
         btn_7 = QPushButton("7")
         btn_7.clicked.connect(lambda: self.append_number("7"))
@@ -96,24 +92,20 @@ class Calculator(QWidget):
         btn_eval.clicked.connect(self.evaluate)
         layout.addWidget(btn_eval, 4, 3)
 
-    # append the clicked number to the display
     # выводит нажатую цифру в окошко
     def append_number(self, num):
         current_text = self.display.text()
         self.display.setText(current_text + num)
 
-    # clear the display
     # этот прикол очищает окошко
     def clear(self):
         self.display.setText("")
 
-    # remove the last character from the display
     # убирает последнюю цифру с дисплея
     def backspace(self):
         current_text = self.display.text()
         self.display.setText(current_text[:-1])
 
-    # evaluate the expression in the display
     # вычисление
     def evaluate(self):
         current_text = self.display.text()

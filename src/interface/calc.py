@@ -1,4 +1,9 @@
-from PySide6.QtWidgets import QWidget, QGridLayout, QLineEdit, QPushButton
+from PySide6.QtWidgets import (
+    QWidget,
+    QGridLayout,
+    QLineEdit,
+    QPushButton,
+)
 
 
 class Calculator(QWidget):
@@ -16,11 +21,6 @@ class Calculator(QWidget):
         self.setLayout(layout)
         self.show()
         # установка названия окна
-        self.setWindowTitle("Смешной калькулятор")
-
-        def _createMenuBar(self):
-            menuBar = QMenuBar(self)
-            self.setMenuBar(menuBar)
 
         # вот этот прикол добавляет кнопки и вставялет их в слоты (не казино)
         btn_7 = QPushButton("7")

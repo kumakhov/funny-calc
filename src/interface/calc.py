@@ -21,6 +21,7 @@ class Calculator(QWidget):
         self.setLayout(layout)
         self.show()
         # установка названия окна
+        self.setWindowTitle("Смешной калькулятор")
 
         # вот этот прикол добавляет кнопки и вставялет их в слоты (не казино)
         btn_7 = QPushButton("7")

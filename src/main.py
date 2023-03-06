@@ -1,5 +1,7 @@
 import sys
 from PySide6.QtWidgets import QApplication
+
+# импорт интерфейса калькулятора
 from interface.calc import Calculator
 
 
